@@ -8,9 +8,13 @@ class Config:
     JWT_ACCESS_TOKEN_EXPIRES = timedelta(hours=1)
     #JWT_ACCESS_TOKEN_EXPIRES = timedelta(minutes=1)
     
-    
+    '''
     SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:@localhost/api_messages_seti'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    '''    
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:Pru3b4setic2025**@18.216.244.41/api_messages_seti'
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    
     
     
    
