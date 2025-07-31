@@ -2,6 +2,8 @@ from flask import Flask
 from config import Config
 from extensions import db, ma, jwt,swagger
 
+from usersjwt.usersjwt_controller import usersjwt_controller
+from loginjwt.loginjwt_controller import loginjwt_controller
 
 
 app = Flask(__name__)
@@ -12,7 +14,8 @@ ma.init_app(app)
 jwt.init_app(app)
 swagger.init_app(app)
 
-
+app.register_blueprint(usersjwt_controller)
+app.register_blueprint(loginjwt_controller)
 
 @app.route('/')
 def index():
