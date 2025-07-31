@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "f8475d8c-598a-4cd2-8cdd-f97614ceea6f",
+		"name": "ApisSetiMessage",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33004280"
+	},
+	"item": [
+		{
+			"name": "messages",
+			"item": [
+				{
+					"name": "createMessage",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1Mzk3ODEwNCwianRpIjoiMmZkZTNiMTgtYWM0OC00YzQ1LWFkNDMtMDU5M2Q4ZGQzZTEzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhbWlsb0BwcnVlYmFzLmNvbSIsIm5iZiI6MTc1Mzk3ODEwNCwiY3NyZiI6IjYzZTNlZWMyLWI5MzktNGQxZS05MmE0LWNiNWMzMGVmMzRjNyIsImV4cCI6MTc1Mzk4MTcwNH0.j4iKeUbUFIjB7CwUAcLQwF_XuZDgZC_9y6nhZYsYezQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"message_id\": \"msg-123475\",\r\n  \"session_id\": \"session-abcdef\",\r\n  \"content\": \"por favor requiero un certificado\",\r\n  \"timestamp\": \"2023-06-15T14:30:00Z\",\r\n  \"sender\": \"user\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/messages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"messages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllMessages",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1Mzk3ODEwNCwianRpIjoiMmZkZTNiMTgtYWM0OC00YzQ1LWFkNDMtMDU5M2Q4ZGQzZTEzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImNhbWlsb0BwcnVlYmFzLmNvbSIsIm5iZiI6MTc1Mzk3ODEwNCwiY3NyZiI6IjYzZTNlZWMyLWI5MzktNGQxZS05MmE0LWNiNWMzMGVmMzRjNyIsImV4cCI6MTc1Mzk4MTcwNH0.j4iKeUbUFIjB7CwUAcLQwF_XuZDgZC_9y6nhZYsYezQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/messages/session-abcdef?limit=15&offset=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"messages",
+								"session-abcdef"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "15"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JWT",
+			"item": [
+				{
+					"name": "createUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"probando@pruebas.com\",\r\n    \"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/usersjwt",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"usersjwt"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loginUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"camilo@pruebas.com\",\r\n    \"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

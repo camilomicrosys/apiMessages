@@ -11,3 +11,6 @@ class Config:
     
     SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:@localhost/api_messages_seti'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    
+    
+   
