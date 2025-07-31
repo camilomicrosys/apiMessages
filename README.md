@@ -3,11 +3,16 @@
 ## 🚀 Instalación
 
 ### 1. Base de datos (MySQL)
-- Descarga e instala **XAMPP** desde [https://www.apachefriends.org/es/index.html](https://www.apachefriends.org/es/index.html)
-- Abre XAMPP y haz clic en los botones **Start** de **Apache** y **MySQL**.
-- Da clic en **Admin** en MySQL para abrir **phpMyAdmin**.
-- Crea una base de datos llamada `api_messages_seti`.
-- Importa el script SQL ubicado en la carpeta `backup-db` del proyecto si existe.
+Eh configurado una base de datos mysql en aws Ec2, para simplicidad de no tener que intalar nada sino solo ejecutar el proyecto.
+El proyecto tiene en el archivo config.py configurada la conexion a mysql en aws asi que no 
+se debe intalar mysql ni servidores esta es la conexion que alli tengo:
+SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:Pru3b4setic2025**@18.216.244.41/api_messages_seti'
+SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+la url para ver visualmente la base de datos con las tablas e insersiones(gestor de base de datos phpmyadmin):
+http://18.216.244.41/phpmyadmin/index.php
+usuario: root
+pass: Pru3b4setic2025**
 
 ### 2. Backend con Flask
 - Asegúrate de tener **Python 3.10 o superior** instalado.
