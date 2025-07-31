@@ -3,7 +3,7 @@
 ## 🚀 Instalación
 
 ### 1. Base de datos (MySQL)
-Eh configurado una base de datos mysql en aws Ec2, para simplicidad de no tener que intalar nada sino solo ejecutar el proyecto.
+Eh configurado una base de datos mysql(pruebas) en aws Ec2, para simplicidad de no tener que instalar nada sino solo ejecutar el proyecto.
 El proyecto tiene en el archivo config.py configurada la conexion a mysql en aws asi que no 
 se debe intalar mysql ni servidores esta es la conexion que alli tengo:
 SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:Pru3b4setic2025**@18.216.244.41/api_messages_seti'
